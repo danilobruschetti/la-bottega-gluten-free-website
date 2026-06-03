@@ -29,7 +29,7 @@ function applyCatalog(){
     const filterOk = activeFilter === 'tutti' || category.includes(activeFilter) || (card.dataset.keywords || '').includes(activeFilter);
     const termOk = !term || haystack.includes(term);
     const visible = filterOk && termOk;
-    card.style.display = visible ? '' : 'none';
+    card.classList.toggle('is-hidden', !visible);
     if (visible) shown++;
   });
   if (empty) empty.style.display = shown ? 'none' : 'block';
