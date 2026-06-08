@@ -43,14 +43,3 @@ chips.forEach(chip => chip.addEventListener('click', () => {
 if (search) search.addEventListener('input', applyCatalog);
 applyCatalog();
 
-const mailForms = $$('[data-mail-form]');
-mailForms.forEach(form => {
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const recipient = form.dataset.recipient || 'info@labottegaglutenfree.ch';
-    const subject = 'Richiesta dal sito - La Bottega Gluten Free';
-    const body = ['Nome: ' + (data.get('Nome') || ''),'Email: ' + (data.get('Email') || ''),'Telefono: ' + (data.get('Telefono') || ''),'','Messaggio:',data.get('Messaggio') || ''].join('\n');
-    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  });
-});
