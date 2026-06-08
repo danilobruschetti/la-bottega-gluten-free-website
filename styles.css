@@ -414,3 +414,17 @@ body{background:linear-gradient(180deg,#faf6ef 0%,#fffdfa 30%,#f9f4eb 100%);colo
   font-size: 0 !important;
   background-color: #f2eadc !important;
 }
+/* FIX immagine Chi siamo */
+.editorial-photo {
+  background:
+    linear-gradient(0deg, rgba(20, 28, 18, .04), rgba(20, 28, 18, .04)),
+    url("assets/ui/page-hero-about.webp") center/cover no-repeat !important;
+  min-height: 420px !important;
+  border-radius: 34px !important;
+  border: 1px solid rgba(35,39,35,.08);
+  box-shadow: 0 16px 42px rgba(24,30,25,.08);
+}
+
+.editorial-photo::before {
+  display: none !important;
+}
